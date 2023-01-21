@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Spark Foundation</title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css'>
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'><link rel="stylesheet" href="./style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<link rel="stylesheet" href="./styleview.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="navbar navbar-expand-custom navbar-mainbg">
+    <div class="container-fluid" >
+        <a class="navbar-brand navbar-logo" href="#">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPTiAlJY9WvgMnQTbG8kF4hQYdGE0C1kQMB110N_ixPVsFKvnZdApfjaT6TDnPRQUlWrg&usqp=CAU" alt="Bank of India" width="70" height="48" >
+    <i><strong>Spark Foundation</strong></i>
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Home</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>Loans</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Contact Us</a>
+                </li>&nbsp;&nbsp;&nbsp;
+            </ul>
+        </div></div>
+    </nav>
+
+    <!----------------------------------------------------------------------------------->
+
+    <div class="my-info text-center">
+        <h2>Hi Harshda Panpatil</h2>
+        <h4>Current Balance <p id="myAccountBalance">50000</p></h4>
+
+        <button class="btn btn-info" data-toggle="modal" data-target="#sendMoney">Send Money</button>
+       
+    </div>
+<br>
+  
+  <div class="modal fade" id="sendMoney" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Send Money</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <form action="">
+                  <div class="input-group mb-3">
+                      <input type="text" id="enterName" class="form-control" placeholder="Recipient's username"
+                          aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon2"></span>
+                      </div>
+                  </div>
+                  <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text"></span>
+                      </div>
+                      <input type="text" id="enterAmount" class="form-control" placeholder=" Enter Amount"
+                          aria-label="Amount ">
+                      <div class="input-group-append">
+                          <span class="input-group-text">.00</span>
+                      </div>
+                  </div>
+
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" onclick="sendMoney()" class="btn btn-success" data-dismiss="modal">Pay</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<div class="my-info text-center">
+      <form action="Transaction.html">
+    <table class="table table-hover">
+        
+            <thead>
+              <tr>
+                <th scope="col">Sr.No</th>
+                <th scope="col">Account No</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Current Balance</th>
+                <th scope="col" id="sendMoney">Transfer Money</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <th scope="row" >1</th>
+                <td>5451</td>
+                <td>Kishor Limye</td>
+                <td><p id="Kishor Limye" >7000 </p> </td>
+                <td><button id="transfer" type="submit" value="button" data-toggle="modal" data-target="#sendMoney">Transfer</td> 
+              </tr>
+
+              <tr>
+                <th scope="row">2</th>
+                <td>7423</td>
+                <td>Payal Desai</td>
+                <td><p id="Payal Desai">10000 </p> </td>
+                <td><button id="transfer" type="submit" value="button" >Transfer</td>
+              </tr>
+
+              <tr id="149">
+                <th scope="row">3</th>
+                <td>149</td>
+                <td>Leena Patil</td>
+                <td><p id="Leena Patil">4500 </p></td>
+                <td><button id="transfer" type="submit" value="button" >Transfer</td>
+              </tr>
+              <tr id="2459">
+                <th scope="row">4</th>
+                <td>2459</td>
+                <td>Hemant Jadhav</td>
+                <td><p id="Hemant Jadhav">8500 </p></td>
+                <td><button id="transfer" type="submit" value="button" >Transfer</td>
+              </tr>
+              <tr id="2244">
+                <th scope="row">5</th>
+                <td>2244</td>
+                <td>Sadhna Yewale</td>
+                <td> <p id="Sadhna Yewale">12000 </p></td>
+                <td><button id="transfer" type="submit" value="button" >Transfer</td>
+              </tr>
+              <tr id="9683">
+                <th scope="row">6</th>
+                <td>9683</td>
+                <td>Jay Varma</td>
+                <td><p id="Jay Varma">32000</p></td>
+                <td><button id="transfer" type="submit" value="button">Transfer</td>
+              </tr>
+              <tr id="5541">
+                <th scope="row">7</th>
+                <td>5541</td>
+                <td>Vaishali Ghule</td>
+                <td><p id="Vaishali Ghule"> 16000 </p></td>
+                <td><button id="transfer" type="submit" value="button" >Transfer</td>
+              </tr>
+              <tr id="1012">
+                <th scope="row">8</th>
+                <td>1012</td>
+                <td>Manish Nehte</td>
+                <td><p id="Manish Nehte">3100 </p></td>
+                <td><button id="transfer" type="submit" value="button">Transfer</td>
+              </tr>
+              <tr id="4556">
+                <th scope="row">9</th>
+                <td>4556</td>
+                <td>Shraddha B</td>
+                <td><p id="Shraddha B">7580</p></td>
+                <td><button id="transfer" type="submit" value="button">Transfer</td>
+              </tr>
+              <tr id="6599">
+                <th scope="row">10</th>
+                <td>6599</td>
+                <td>Tanaya Agrawal</td>
+                <td><p id="Tanaya Agrawal">5000 </p></td>
+                <td><button id="transfer" type="submit" value="button">Transfer</td></tr>
+              </tr>
+
+            </tbody>        
+      </table>
+</form>
+</div>
+
+<!---------------------------------------- Dialog box ----------------------------------------------------------->
+<div class="modal fade" id="transfer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Send Money</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="input-group mb-3">
+                            <input type="text" id="enterName" class="form-control" placeholder="Recipient's username"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">@email.com</span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"></span>
+                            </div>
+                            <input type="text" id="enterAmount" class="form-control" placeholder=" Enter Amount"
+                                aria-label="Amount (to the nearest dollar)">
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" onclick="sendMoney()" class="btn btn-success" data-dismiss="modal">Send
+                        Money</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- partial -->
+
+<script  src="./script.js"></script>
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
